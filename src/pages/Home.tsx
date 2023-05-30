@@ -1,40 +1,52 @@
-import * as React from 'react';
-import { Button, View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
+import React, { useEffect, useState } from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { PermissionsPage } from './PermissionsPage';
+import { MediaPage } from './MediaPage';
+import { CameraPage } from './CameraPage';
+import type { Routes } from './Routes';
+import { Camera, CameraPermissionStatus } from 'react-native-vision-camera';
 
-function Profile({ navigation}:any) {
+const Stack = createNativeStackNavigator<Routes>();
+
+function Home(): React.ReactElement | null {
+  const [cameraPermission, setCameraPermission] = useState<CameraPermissionStatus>();
+  const [microphonePermission, setMicrophonePermission] = useState<CameraPermissionStatus>();
+
+  useEffect(() => {
+    Camera.getCameraPermissionStatus().then(setCameraPermission);
+    Camera.getMicrophonePermissionStatus().then(setMicrophonePermission);
+  }, []);
+
+  console.log(`Re-rendering Navigator. Camera: ${cameraPermission} | Microphone: ${microphonePermission}`);
+
+  if (cameraPermission == null || microphonePermission == null) {
+    // still loading
+    return null;
+  }
+
+  const showPermissionsPage = cameraPermission !== 'authorized' || microphonePermission === 'not-determined';
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Profile Screen</Text>
-      <Button
-        onPress={() => navigation.navigate('EditPost')}
-        title="Go to Edit Post"
-      />
-    </View>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+          statusBarStyle: 'dark',
+          animationTypeForReplace: 'push',
+        }}
+        initialRouteName={showPermissionsPage ? 'PermissionsPage' : 'CameraPage'}>
+        <Stack.Screen name="PermissionsPage" component={PermissionsPage} />
+        <Stack.Screen name="CameraPage" component={CameraPage} />
+        <Stack.Screen
+          name="MediaPage" 
+          component={MediaPage}
+          options={{
+            animation: 'none',
+            presentation: 'transparentModal',
+          }}
+        />
+      </Stack.Navigator>
   );
 }
-
-function EmptyScreen() {
-  return <View />;
-}
-
-
-
-const Tab = createBottomTabNavigator();
-const Stack = createNativeStackNavigator();
-
-function Home() {
-  return (
-    <Tab.Navigator>
-      <Tab.Screen name="Profile" component={Profile} />
-      <Tab.Screen name="Settings" component={EmptyScreen} />
-    </Tab.Navigator>
-  );
-}
-
-
 
 
 export default Home;
