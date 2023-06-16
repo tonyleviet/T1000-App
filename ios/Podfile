@@ -23,6 +23,7 @@ end
 # https://github.com/firebase/firebase-ios-sdk/issues/6339
 # Should be referenced for anything below that transitively uses GoogleUtilities
 def google_utilites
+  pod 'GoogleUtilities', '~> 7.11'
   pod 'GoogleUtilities/AppDelegateSwizzler'
   pod 'GoogleUtilities/Environment'
   pod 'GoogleUtilities/ISASwizzler'
@@ -57,12 +58,18 @@ target 'T1000Shop' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
   google_utilites
-  pod 'FBAudienceNetwork', '~> 6.12'
+  
+  #pod 'Google-Mobile-Ads-SDK', '~> 10.6'
+  #pod 'GoogleMobileAdsMediationFacebook', '~> 6.12'
+  #pod 'FBAudienceNetwork', '~> 6.12'
+  #pod 'Google-Mobile-Ads-SDK',  '~> 10.6'
+  #pod 'GoogleMobileAdsMediationFacebook', '~> 6.12'
+  #pod 'Firebase'
+  pod 'FirebaseCore', '~> 10.7.0'
 
-
-  pod 'Firebase', :modular_headers => true
-  pod 'FirebaseCore', :modular_headers => true
-  pod 'GoogleUtilities', :modular_headers => true
+ # Required by RNFirebase
+  #pod 'Firebase/Core'
+  #pod 'GoogleUtilities', '~> 7.11'
   $RNFirebaseAsStaticFramework = true
   target 'T1000ShopTests' do
     inherit! :complete

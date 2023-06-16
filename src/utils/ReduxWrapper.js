@@ -21,11 +21,11 @@ export const mapDispatchToProps = {
 };
 
 export const hocComponentName = (WrappedComponent) => {
-  const hocComponent = ({...props}) => <WrappedComponent {...props} />;
+  const hocComponentConst = ({...props}) => <WrappedComponent {...props} />;
 
-  hocComponent.propTypes = {};
+  hocComponentConst.propTypes = {};
 
-  return hocComponent;
+  return hocComponentConst;
 };
 
 export default (ReduxWrapper) =>

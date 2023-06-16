@@ -9,7 +9,7 @@
 import React ,{useEffect,useState}from 'react';
 import MainStack from './src/routing/MainStack';
 import {Provider} from 'react-redux';
-import {StatusBar} from 'react-native';
+import {Button, Text, View ,StatusBar} from 'react-native';
 import storePre from './src/redux/storeRedux';
 import DropdownAlert from 'react-native-dropdownalert';
 import {AlertHelper} from './src/utils/AlertHelper';
@@ -28,24 +28,24 @@ FontAwesome.loadFont()
 Feather.loadFont()
 MaterialCommunityIcons.loadFont()
 const App: () => React$Node = () => {
-  const {persistor, store} = storePre;
+  const {storeConst,persistor} = storePre;
  
 
   return (
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        {navigationTypeTabs ? <TabNavigationStack/> : <MainStack />} 
-        <DropdownAlert
-          defaultContainer={{
-            padding: 8,
-            paddingTop: StatusBar.currentHeight,
-            flexDirection: 'row',
-          }}
-          ref={(ref) => AlertHelper.setDropDown(ref)}
-          onClose={() => AlertHelper.invokeOnClose()}
-        />
-      </PersistGate>
-    </Provider>
+    <Provider store={storeConst}>
+    <PersistGate loading={null} persistor={persistor}>
+      {navigationTypeTabs ? <TabNavigationStack/> : <MainStack />} 
+      <DropdownAlert
+        defaultContainer={{
+          padding: 8,
+          paddingTop: StatusBar.currentHeight,
+          flexDirection: 'row',
+        }}
+        ref={(ref) => AlertHelper.setDropDown(ref)}
+        onClose={() => AlertHelper.invokeOnClose()}
+      />
+    </PersistGate>
+  </Provider>
   );
 };
 

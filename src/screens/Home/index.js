@@ -12,10 +12,10 @@ import {scale} from 'react-native-size-matters';
 import SearchBox from '../../components/SearchBox';
 import TitleComp from '../../components/TitleComp';
 import {connect} from 'react-redux';
-import auth from '@react-native-firebase/auth';
+//import auth from '@react-native-firebase/auth';
 import ReduxWrapper from '../../utils/ReduxWrapper';
 import TestComp from '../../components/TestComp';
-import NativeAdView from 'react-native-admob-native-ads';
+//import NativeAdView from 'react-native-admob-native-ads';
 import {ANDROID_FULL_PAGE_AD_ID} from '../../utils/appConfig';
 import useListners from '../../hooks/useListners';
  

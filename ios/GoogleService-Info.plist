@@ -3,32 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1015972329649-qmuhvbcu5kl345e59njn82djgr6t8uf8.apps.googleusercontent.com</string>
+	<string>931543784856-itfsgiu06lg9cj5kgctrhfqb66eh4ga3.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1015972329649-qmuhvbcu5kl345e59njn82djgr6t8uf8</string>
+	<string>com.googleusercontent.apps.931543784856-itfsgiu06lg9cj5kgctrhfqb66eh4ga3</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCrIMl1AwrvE3mOZ89SRS2eHYWNTVYjN1M</string>
+	<string>AIzaSyARnc1SiAE2kKZQ3Vugk-5Jej6ZrlsNDEI</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1015972329649</string>
+	<string>931543784856</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.amusoftech.shop</string>
+	<string>com.relationshop.r1</string>
 	<key>PROJECT_ID</key>
-	<string>annusoftech-shop</string>
+	<string>t1000-app</string>
 	<key>STORAGE_BUCKET</key>
-	<string>annusoftech-shop.appspot.com</string>
+	<string>t1000-app.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1015972329649:ios:ec215aef2eb43801908a90</string>
+	<string>1:931543784856:ios:a6b307c1a6553017a69fed</string>
 </dict>
 </plist>

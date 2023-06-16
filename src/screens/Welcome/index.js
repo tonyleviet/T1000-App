@@ -17,6 +17,7 @@ export default function index({navigation}) {
     useEffect(() => {
       const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
       return subscriber; // unsubscribe on unmount
+      //return null;
     }, []);
   
     if (initializing) return null; 
