@@ -52,6 +52,7 @@
 		6B7F80F92A3402FD0075C261 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		6B7F81082A34885A0075C261 /* ExampleFrameProcessorPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ExampleFrameProcessorPlugin.m; path = "Frame Processor Plugins/Example Plugin (Objective-C)/ExampleFrameProcessorPlugin.m"; sourceTree = "<group>"; };
 		6B7F810A2A3488720075C261 /* Example Plugin (Swift) */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Example Plugin (Swift)"; path = "Frame Processor Plugins/Example Plugin (Swift)"; sourceTree = "<group>"; };
+		6BA550952A3DF9350098CFC3 /* FlipperKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FlipperKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BE8ACCF2A38DA4100AB27AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = T1000Shop/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-T1000Shop-T1000ShopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T1000Shop-T1000ShopTests.release.xcconfig"; path = "Target Support Files/Pods-T1000Shop-T1000ShopTests/Pods-T1000Shop-T1000ShopTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +112,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6BA550952A3DF9350098CFC3 /* FlipperKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				276AF03A70AA61B3A530E27A /* Pods_T1000Shop.framework */,
 				17DFDC2A25BF18B91AC7104E /* Pods_T1000Shop_T1000ShopTests.framework */,
