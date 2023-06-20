@@ -93,9 +93,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.t1000shop"
+    namespace "com.t1000app"
     defaultConfig {
-        applicationId "com.t1000shop"
+        applicationId "com.t1000app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
