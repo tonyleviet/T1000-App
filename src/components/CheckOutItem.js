@@ -3,7 +3,7 @@ import {View, Text, Image} from 'react-native';
 import {scale} from 'react-native-size-matters';
 import {appColors} from '../utils/appColors';
 import Label from './Label';
-import {SimpleStepper} from 'react-native-simple-stepper';
+import SimpleStepper from 'react-native-simple-stepper';
 
 export default function CheckOutItem({ renderBagge, hideSteper,noBg, image, name, price}) {
   return (
@@ -48,12 +48,15 @@ export default function CheckOutItem({ renderBagge, hideSteper,noBg, image, name
             paddingHorizontal: scale(20),
             height: scale(35), 
           }}
+          initialValue={1}
+          minimumValue={1}
+          onMin = {() => { console.log('SimpleStepper reach minvalue') }}
           incrementStepStyle={{padding: scale(10), opacity: scale(0.4)}}
           decrementStepStyle={{padding: scale(10), opacity: scale(0.4)}}
           incrementImageStyle={{height: scale(20), width: scale(20)}}
           decrementImageStyle={{height: scale(20), width: scale(20)}}
-          showText
-          renderText={() => <Label text="1" />}
+          showText={true}
+         
           separatorStyle={{}} 
         />}
         {renderBagge&&renderBagge()}
