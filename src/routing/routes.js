@@ -86,9 +86,10 @@ export const RoutesList = [
     component: Checkout,
     options: {
       tabBarButton: (props) => null,
-      //tabBarVisible:false,
+      tabBarVisible:false,
       //tabBarBadge: 3,
       tabBarLabel: 'Checkout',
+      tabBarStyle: { display: "none" },
     },
   },
 
@@ -133,6 +134,7 @@ export const RoutesList = [
       tabBarVisible: false,
       //tabBarBadge: 3,
       tabBarLabel: 'CheckoutDelivery',
+      tabBarStyle: { display: "none" },
     },
   },
 
@@ -144,6 +146,7 @@ export const RoutesList = [
       tabBarVisible: false,
       //tabBarBadge: 3,
       tabBarLabel: 'CheckOutSteper',
+      tabBarStyle: { display: "none" },
     },
   },
 

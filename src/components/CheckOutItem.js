@@ -6,6 +6,7 @@ import Label from './Label';
 import SimpleStepper from 'react-native-simple-stepper';
 
 export default function CheckOutItem({ renderBagge, hideSteper,noBg, image, name, price}) {
+  console.log('CheckOutItem image' , image)
   return (
     <View
       style={{
@@ -20,7 +21,7 @@ export default function CheckOutItem({ renderBagge, hideSteper,noBg, image, name
            borderRadius:  scale(noBg ? 5 : 0),
           //backgroundColor:appColors.darkGray
         }}
-        source={{uri:image} }
+        source={image}
       />
 
       <View

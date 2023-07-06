@@ -7,16 +7,13 @@ import {deliveryTypes} from '../../utils/MockData';
 export default function CheckoutDelivery({navigation}) {
     const [selectedAddress, setSelectedAddress] = useState("Standard Delivery") 
     const onSelect = (item) =>{
-        console.log('setSelectedAddress',item);
         setSelectedAddress( item.label)
     }
   return (
-    <View style={{paddingVertical: scale(2)}}>
+    <View style={{paddingVertical: scale(20)}}>
       <FlatList
         data={deliveryTypes}
-        renderItem={({item, index}) => 
-        <SelectAble selected={ selectedAddress === item.label } 
-        onSelect={onSelect} navigation={navigation} item={item} key={index} />}
+        renderItem={({item, index}) => <SelectAble selected={ selectedAddress === item.label } onSelect={onSelect} item={item} key={index} />}
       />
     </View>
   );

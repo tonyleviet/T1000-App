@@ -6,7 +6,7 @@ import Label from '../../components/Label';
 import CustomInput from '../../components/CustomInput';
 export default function CheckoutAddress() {
   return (
-    <View >
+    <View style={{paddingVertical: scale(30)}}>
       <View style={{flex:1,  flexDirection: 'row', justifyContent: 'space-around', alignItems:'center'}}>
         <CheckBox isChecked={true} /> 
         <View style={{paddingLeft:scale(10)}}>

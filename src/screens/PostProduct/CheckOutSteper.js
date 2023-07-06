@@ -19,25 +19,12 @@ export default function CheckOutSteper({navigation}) {
     navigation.navigate("Summary")
      //Summary
   };
-  const MyComponent = (props) => {
-    return (
-      <View>
-        <Text>{props.title}</Text>
-      </View>
-    );
-  };
-  
-  const content = [
-    <MyComponent title="Component 1" />,
-    <MyComponent title="Component 2" />,
-    <MyComponent title="Component 3" />,
-  ];
   return (
     <Container>
       <ScreenHeader label="Checkout" navigation={navigation} />
 
       <Stepper
-       
+        stepStyle={styles.stepStyle}
         active={active}
         onFinish={onFinish}
         content={[
@@ -45,10 +32,12 @@ export default function CheckOutSteper({navigation}) {
           <CheckoutAddress />,
           <CheckoutPayment />,
         ]}
-        showButton={true}
+        //showButton={false}
         onNext={() => setActive((p) => p + 1)}
         onBack={() => setActive((p) => p - 1)}
-       
+        buttonStyle={styles.buttonStyle}
+        buttonTextStyle={styles.buttonTextStyle}
+        wrapperStyle={styles.wrapperStyle}
       />
     </Container>
   );

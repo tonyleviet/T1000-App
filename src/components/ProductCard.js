@@ -18,7 +18,7 @@ export default function ProductCard({navigation, item}) {
         <Image 
         resizeMode='contain'
         style={{height:scale(200), width:scale(180)}} 
-        source={{ uri:image}} />
+        source={image} />
         {isNew && (
           <View
             style={{
